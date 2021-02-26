@@ -14,4 +14,7 @@ yarn-error.log
 
 /modules/website/dist/
 /modules/website/.pnp.js
-/modules/website/.yarn/
+/modules/website/.yarn/cache
+/modules/website/.yarn/unplugged
+/modules/website/.yarn/build-state.yml
+/modules/website/.yarn/install-state.gz
