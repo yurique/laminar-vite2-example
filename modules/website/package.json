@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.2.1",
+    "@tailwindcss/typography": "^0.4.0",
+    "postcss": "^8.2.6",
+    "postcss-import": "^14.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "stylelint": "^13.11.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-standard": "^20.0.0",
+    "tailwindcss": "^2.0.3",
+    "vite": "^2.0.3"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "highlight.js": "^10.6.0",
+    "marked": "^2.0.0"
+  }
+}
