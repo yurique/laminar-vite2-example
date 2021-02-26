@@ -28,7 +28,7 @@ sbt:laminar-vite2-example> fastLinkJS
 sbt:laminar-vite2-example> ~fastLinkJS
 ```
 
-Then, start the Snowpack dev server (from a terminal – this is *not* a sbt command):
+Then, start the dev server:
 
 ```console
 $ yarn dev
@@ -41,11 +41,19 @@ In sbt:
 sbt:laminar-vite2-example> fullLinkJS
 ```
 
-Run the Snowpack `build` command:
+In the `modules/website/index.html` uncomment the reference to the production `main.js` (TODO: automate this?)
+
+Run the `build`:
 
 ```console
 $ yarn build
 ```
+
+The assets will end up in the `dist` directory.
+
+* `index.*.js` ~`880K`
+* `vendor.*.js` ~`43K`
+* `index.*.css` ~`4.3K`
 
 To preview the production build:
 
@@ -53,22 +61,10 @@ To preview the production build:
 $ yarn serve
 ```
 
-The assets will end up in the `dist` directory.
-
-* `index.*.js` ~`891K` (~`928K` with Scala 3 RC1)
-* `vendor.*.js` ~`43K`
-* `index.*.css` ~`12K`
-
 ## Scala 3
 
 You can build this app with Scala 3:
 
 * uncomment the corresponding line in the `build.sbt` (and comment the other one)
-* do the same in the `modules/website/index.html`
+* update the `modules/website/index.html`
 
-## TODO
-
-The production build is partially broken: something goes wrong when Vite resolves an import from the npm dependency – `marked`,
-it prints `Cannot call a namespace ('$i_marked')` and the `/embedded-file` page is broken in the production build. 
-
-It works in dev mode, though.
