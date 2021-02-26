@@ -16,7 +16,6 @@ The app is styled with [tailwindcss](https://tailwindcss.com/).
 
 ```console
 $ cd modules/website
-$ yarn set version berry
 $ yarn install
 ```
 
