@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation.JSImport
 
 @js.native
 @JSImport("stylesheets/main.css", JSImport.Namespace)
-object Css extends js.Object
+object Css extends js.Any
 
 object Main {
 
