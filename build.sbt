@@ -13,14 +13,12 @@ lazy val basicSettings = Seq(
       "-Wunused:params"
     )
   )),
-  scalaJSLinkerConfig ~= { _.withModuleKind(ModuleKind.ESModule) },
-  scalaJSLinkerConfig ~= { _.withSourceMap(false) },
   libraryDependencies ++= Seq(
-    ("com.raquo"     %%% "laminar"              % "0.12.0-RC1").withDottyCompat(scalaVersion.value),
-    ("io.frontroute" %%% "frontroute"           % "0.12.0-RC1").withDottyCompat(scalaVersion.value),
-    ("io.laminext"   %%% "core"                 % "0.12.0-RC1").withDottyCompat(scalaVersion.value),
-    ("io.laminext"   %%% "markdown"             % "0.12.0-RC1").withDottyCompat(scalaVersion.value),
-    "com.yurique"    %%% "embedded-files-macro" % "0.2.1"
+    ("com.raquo"     %%% "laminar"              % LibraryVersions.laminar).withDottyCompat(scalaVersion.value),
+    ("io.frontroute" %%% "frontroute"           % LibraryVersions.frontroute).withDottyCompat(scalaVersion.value),
+    ("io.laminext"   %%% "core"                 % LibraryVersions.laminext).withDottyCompat(scalaVersion.value),
+    ("io.laminext"   %%% "markdown"             % LibraryVersions.laminext).withDottyCompat(scalaVersion.value),
+    "com.yurique"    %%% "embedded-files-macro" % LibraryVersions.`embedded-files-macro`
   )
 )
 
@@ -50,7 +48,9 @@ lazy val website = project
   .enablePlugins(ScalaJSPlugin)
   .settings(basicSettings)
   .settings(
+    scalaJSLinkerConfig ~= { _.withModuleKind(ModuleKind.ESModule) },
     scalaJSLinkerConfig ~= { _.withModuleSplitStyle(ModuleSplitStyle.FewestModules) },
+    scalaJSLinkerConfig ~= { _.withSourceMap(false) },
     scalaJSUseMainModuleInitializer := true
   )
   .dependsOn(module1, module2)

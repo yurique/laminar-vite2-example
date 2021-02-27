@@ -67,10 +67,3 @@ You can build this app with Scala 3:
 
 * uncomment the corresponding line in the `build.sbt` (and comment the other one)
 * update the `modules/website/index.html`
-
-## Caveat/TODO
-
-The production build is partially broken: something goes wrong when Vite resolves an import from the npm dependency – `marked`,
-it prints `Cannot call a namespace ('$i_marked')` and the `/embedded-file` page is broken in the production build.
-
-It works in dev mode, though.
