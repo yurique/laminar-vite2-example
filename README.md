@@ -65,5 +65,5 @@ $ yarn serve
 
 You can build this app with Scala 3:
 
-* uncomment the corresponding line in the `build.sbt` (and comment the other one)
-* update the `modules/website/index.html`
+* uncomment the corresponding line in the `build.sbt` (and comment the other one), same in the `vive.config.js`
+
