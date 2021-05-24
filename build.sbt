@@ -1,7 +1,10 @@
 import org.scalajs.linker.interface.ModuleSplitStyle
 
-ThisBuild / scalaVersion := ScalaVersions.v213
-//ThisBuild / scalaVersion := ScalaVersions.v3
+// keep one of the following lines uncommented as is, the build.sbt is grepped in the
+// modules/website/scala-version.js to detect the scala version
+
+//ThisBuild / scalaVersion := ScalaVersions.v213
+ThisBuild / scalaVersion := ScalaVersions.v3
 
 lazy val basicSettings = Seq(
   scalacOptions ~= (_.filterNot(
