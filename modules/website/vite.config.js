@@ -8,6 +8,8 @@ const scalaVersion = '2.13'
 export default ({ mode }) => {
   const mainJS = `/target/scala-${scalaVersion}/website-${mode === 'production' ? 'opt' : 'fastopt'}/main.js`
   console.log('mainJS', mainJS)
+  const script = `<script type="module" src="${mainJS}"></script>`
+
   return {
     publicDir: './src/main/static/public',
     plugins: [
@@ -16,7 +18,7 @@ export default ({ mode }) => {
       ] : []),
       injectHtml({
         injectData: {
-          mainJS
+          script
         }
       })
     ],
