@@ -1,7 +1,7 @@
 import org.scalajs.linker.interface.ModuleSplitStyle
 
 ThisBuild / scalaVersion := ScalaVersions.v213
-//ThisBuild / scalaVersion := ScalaVersions.v3RC1
+//ThisBuild / scalaVersion := ScalaVersions.v3
 
 lazy val basicSettings = Seq(
   scalacOptions ~= (_.filterNot(
@@ -14,10 +14,10 @@ lazy val basicSettings = Seq(
     )
   )),
   libraryDependencies ++= Seq(
-    ("com.raquo"     %%% "laminar"              % LibraryVersions.laminar).withDottyCompat(scalaVersion.value),
-    ("io.frontroute" %%% "frontroute"           % LibraryVersions.frontroute).withDottyCompat(scalaVersion.value),
-    ("io.laminext"   %%% "core"                 % LibraryVersions.laminext).withDottyCompat(scalaVersion.value),
-    ("io.laminext"   %%% "markdown"             % LibraryVersions.laminext).withDottyCompat(scalaVersion.value),
+    ("com.raquo"     %%% "laminar"              % LibraryVersions.laminar).cross(CrossVersion.for3Use2_13),
+    ("io.frontroute" %%% "frontroute"           % LibraryVersions.frontroute).cross(CrossVersion.for3Use2_13),
+    ("io.laminext"   %%% "core"                 % LibraryVersions.laminext).cross(CrossVersion.for3Use2_13),
+    ("io.laminext"   %%% "markdown"             % LibraryVersions.laminext).cross(CrossVersion.for3Use2_13),
     "com.yurique"    %%% "embedded-files-macro" % LibraryVersions.`embedded-files-macro`
   )
 )

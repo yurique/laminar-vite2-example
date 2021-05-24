@@ -7,7 +7,7 @@ const config = {
     enabled: true,
     content: [
       path.resolve(__dirname, './target/scala-2.13/website-opt/*.js'),
-      path.resolve(__dirname, './target/scala-3.0.0-RC1/website-opt/*.js'),
+      path.resolve(__dirname, './target/scala-3.0.0/website-opt/*.js'),
       path.resolve(__dirname, './index.html'),
     ]
   }
