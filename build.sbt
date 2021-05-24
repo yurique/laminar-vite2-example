@@ -14,11 +14,11 @@ lazy val basicSettings = Seq(
     )
   )),
   libraryDependencies ++= Seq(
-    ("com.raquo"     %%% "laminar"              % LibraryVersions.laminar).cross(CrossVersion.for3Use2_13),
-    ("io.frontroute" %%% "frontroute"           % LibraryVersions.frontroute).cross(CrossVersion.for3Use2_13),
-    ("io.laminext"   %%% "core"                 % LibraryVersions.laminext).cross(CrossVersion.for3Use2_13),
-    ("io.laminext"   %%% "markdown"             % LibraryVersions.laminext).cross(CrossVersion.for3Use2_13),
-    "com.yurique"    %%% "embedded-files-macro" % LibraryVersions.`embedded-files-macro`
+    "com.raquo"     %%% "laminar"              % LibraryVersions.laminar,
+    "io.frontroute" %%% "frontroute"           % LibraryVersions.frontroute,
+    "io.laminext"   %%% "core"                 % LibraryVersions.laminext,
+    "io.laminext"   %%% "markdown"             % LibraryVersions.laminext,
+    "com.yurique"   %%% "embedded-files-macro" % LibraryVersions.`embedded-files-macro`
   )
 )
 
