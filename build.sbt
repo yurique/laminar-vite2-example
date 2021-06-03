@@ -4,7 +4,7 @@ import org.scalajs.linker.interface.ModuleSplitStyle
 // modules/website/scala-version.js to detect the scala version
 
 //ThisBuild / scalaVersion := ScalaVersions.v213
-ThisBuild / scalaVersion := ScalaVersions.v3
+ThisBuild / scalaVersion := ScalaVersions.v213
 
 lazy val basicSettings = Seq(
   scalacOptions ~= (_.filterNot(
